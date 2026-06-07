@@ -1,9 +1,9 @@
 # Archival Release Plan
 
 This GitHub repository contains code, processed inputs, compact result tables,
-and figure-source CSVs. Larger generated artifacts have been packaged and
-uploaded to an unpublished Zenodo draft with reserved DOI
-`10.5281/zenodo.20583059`.
+and figure-source CSVs. A source archive for the tagged GitHub release and the
+larger generated artifacts have been packaged and uploaded to an unpublished
+Zenodo draft with reserved DOI `10.5281/zenodo.20583059`.
 
 ## Recommended Zenodo Software Record
 
@@ -16,11 +16,15 @@ Archive the full GitHub release:
 - `results/example_run/`
 - documentation and metadata files
 
-Suggested tag: `v1.0.0-wrr-submission`
+Archived source file in the Zenodo draft:
+
+- `jinsha-daily-drought-hybrid-v1.0.0-wrr-submission-source.zip`
+
+Release tag: `v1.0.0-wrr-submission`
 
 ## Recommended Zenodo Data/Output Record
 
-The Zenodo draft contains these large reproducibility artifacts:
+The Zenodo draft also contains these large reproducibility artifacts:
 
 - Full one-step prediction table from the manuscript run:
   `output/hybrid_modal_physics_joint/daily_multitask_joint_8stations_journal_tier1_leakfree/predictions_daily_all_models.csv`

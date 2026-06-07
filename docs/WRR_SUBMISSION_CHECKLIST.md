@@ -6,18 +6,18 @@ Use this checklist before submitting the manuscript.
 
 - [x] Public GitHub repository created from this directory: https://github.com/ARETE-zzwl/jinsha-daily-drought-hybrid
 - [x] Release tag created: https://github.com/ARETE-zzwl/jinsha-daily-drought-hybrid/releases/tag/v1.0.0-wrr-submission
-- [ ] Repository README includes installation, quick check, and reproduction commands.
-- [ ] `LICENSE`, `DATA_LICENSE.md`, `CITATION.cff`, and `.zenodo.json` are complete.
+- [x] Repository README includes installation, quick check, and reproduction commands.
+- [x] `LICENSE`, `DATA_LICENSE.md`, `CITATION.cff`, and `.zenodo.json` are complete.
 - [x] All GitHub and Zenodo DOI placeholders are replaced; manuscript DOI remains pending post-acceptance metadata.
 - [ ] No local absolute paths are required by default runtime code.
 - [ ] No private files, credentials, editor folders, or oversized prediction tables are committed.
 
 ## Data
 
-- [ ] Processed station data are present in `data/processed/station_daily/`.
-- [ ] Station metadata are present in `data/processed/station_metadata.csv`.
-- [ ] Derived table/figure data are present in `data/derived/`.
-- [ ] Data dictionary explains all variables and units.
+- [x] Processed station data are present in `data/processed/station_daily/`.
+- [x] Station metadata are present in `data/processed/station_metadata.csv`.
+- [x] Derived table/figure data are present in `data/derived/`.
+- [x] Data dictionary explains all variables and units.
 - [x] Redistribution permission has been confirmed for the processed observational station data.
 - [x] Processed data and derived manuscript data are marked as CC BY 4.0.
 
@@ -27,6 +27,7 @@ Use this checklist before submitting the manuscript.
 - [x] Zenodo draft has reserved DOI `10.5281/zenodo.20583059`.
 - [x] The Zenodo draft includes the same authors as the manuscript.
 - [x] The Zenodo draft includes license, keywords, and description.
+- [x] Source archive for the tagged GitHub release is uploaded to the Zenodo draft.
 - [x] Large prediction tables/checkpoints are uploaded to the Zenodo draft, not GitHub.
 - [ ] Publish the Zenodo draft after final review so the DOI is registered and publicly resolvable.
 
@@ -40,7 +41,7 @@ Use this checklist before submitting the manuscript.
 
 ## Basic Verification
 
-- [ ] `python scripts/check_package.py` passes.
+- [x] `python scripts/check_package.py` passes.
 - [ ] Smoke run completes:
 
 ```bash

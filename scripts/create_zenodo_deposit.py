@@ -1,9 +1,10 @@
-"""Create a Zenodo deposition for the large artifact archive.
+"""Create a Zenodo deposition for the release source and large artifacts.
 
 Requirements:
   - Set ZENODO_ACCESS_TOKEN or ZENODO_TOKEN with scopes deposit:write and,
     if using --publish, deposit:actions.
   - Run scripts/prepare_zenodo_assets.py first.
+  - Create the release source archive with git archive, or pass --source-zip.
 
 By default this creates an unpublished draft and reserves a DOI. Publishing is
 irreversible, so use --publish only after reviewing the draft metadata/files.
@@ -19,7 +20,7 @@ from pathlib import Path
 import requests
 
 
-TITLE = "Large prediction tables and checkpoints for a physics-deep learning daily drought forecasting framework"
+TITLE = "Reproducibility package for a physics-deep learning daily drought forecasting framework"
 
 
 def token_from_env() -> str:
@@ -37,9 +38,12 @@ def create_deposition(api_url: str, token: str) -> dict:
             "title": TITLE,
             "upload_type": "dataset",
             "description": (
-                "Large generated artifacts for the manuscript 'Physics-Deep Learning Hybrid Framework "
+                "Reproducibility package for the manuscript 'Physics-Deep Learning Hybrid Framework "
                 "for Multi-Station Daily Drought Indices and Flash Drought Forecasting in the Jinsha River Basin'. "
-                "The GitHub software repository is https://github.com/ARETE-zzwl/jinsha-daily-drought-hybrid."
+                "This record contains the GitHub release source archive, full prediction tables, and trained model "
+                "checkpoints. The source code is released under the MIT License; processed data and derived artifacts "
+                "are released under CC BY 4.0. The GitHub repository is "
+                "https://github.com/ARETE-zzwl/jinsha-daily-drought-hybrid."
             ),
             "creators": [
                 {"name": "Zhu, Shibang"},
@@ -57,6 +61,8 @@ def create_deposition(api_url: str, token: str) -> dict:
                 "deep learning",
                 "model checkpoint",
                 "prediction table",
+                "reproducibility package",
+                "source code",
             ],
             "related_identifiers": [
                 {
@@ -90,7 +96,14 @@ def publish_deposition(api_url: str, deposition_id: int, token: str) -> dict:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Create a Zenodo draft deposition for large manuscript artifacts.")
+    parser = argparse.ArgumentParser(description="Create a Zenodo draft deposition for manuscript reproducibility files.")
+    parser.add_argument(
+        "--source-zip",
+        type=Path,
+        default=Path(__file__).resolve().parents[2]
+        / "zenodo_artifacts"
+        / "jinsha-daily-drought-hybrid-v1.0.0-wrr-submission-source.zip",
+    )
     parser.add_argument(
         "--artifact-zip",
         type=Path,
@@ -107,14 +120,18 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    if not args.artifact_zip.exists():
-        raise FileNotFoundError(args.artifact_zip)
+    for archive in (args.source_zip, args.artifact_zip):
+        if not archive.exists():
+            raise FileNotFoundError(archive)
 
     token = token_from_env()
     deposition = create_deposition(args.api_url, token)
-    upload_result = upload_file(deposition, args.artifact_zip, token)
+    upload_results = [
+        upload_file(deposition, args.source_zip, token),
+        upload_file(deposition, args.artifact_zip, token),
+    ]
 
-    result = {"deposition": deposition, "upload": upload_result, "published": None}
+    result = {"deposition": deposition, "uploads": upload_results, "published": None}
     if args.publish:
         result["published"] = publish_deposition(args.api_url, deposition["id"], token)
 

@@ -45,4 +45,4 @@ This name is concise, avoids journal-specific wording, and captures the study ar
 
 ## Remaining Publication Metadata
 
-The public GitHub URL and Zenodo reserved DOI have been inserted. The manuscript DOI in `.zenodo.json` remains pending until journal acceptance. The Zenodo draft must still be published before `10.5281/zenodo.20583059` becomes registered and publicly resolvable.
+The public GitHub URL and Zenodo reserved DOI have been inserted. The manuscript DOI in `.zenodo.json` remains pending until journal acceptance. The Zenodo draft now includes both the tagged source archive and large generated artifacts, but it must still be published before `10.5281/zenodo.20583059` becomes registered and publicly resolvable.
