@@ -5,7 +5,7 @@ Use this checklist before submitting the manuscript.
 ## Repository
 
 - [x] Public GitHub repository created from this directory: https://github.com/ARETE-zzwl/jinsha-daily-drought-hybrid
-- [ ] Release tag created, for example `v1.0.0-wrr-submission`.
+- [x] Release tag created: https://github.com/ARETE-zzwl/jinsha-daily-drought-hybrid/releases/tag/v1.0.0-wrr-submission
 - [ ] Repository README includes installation, quick check, and reproduction commands.
 - [ ] `LICENSE`, `DATA_LICENSE.md`, `CITATION.cff`, and `.zenodo.json` are complete.
 - [x] All GitHub and Zenodo DOI placeholders are replaced; manuscript DOI remains pending post-acceptance metadata.
