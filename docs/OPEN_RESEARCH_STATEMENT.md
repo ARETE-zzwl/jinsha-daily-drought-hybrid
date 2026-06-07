@@ -8,7 +8,7 @@ The processed daily station data used to train and evaluate the drought forecast
 
 ## Software Availability Statement
 
-Version **1.0.0-wrr-submission** of the Python code used for data preprocessing, target construction, model training, baseline comparison, recursive forecasting, ablation summaries, and manuscript figure/table data generation is preserved at Zenodo: **TBD Zenodo software DOI**. The code is developed openly at **TBD GitHub URL** and released under the MIT License. The software was tested with Python 3.10+, PyTorch 2.0+, pandas 2.0+, NumPy 1.23+, scikit-learn 1.3+, and Matplotlib 3.7+.
+Version **1.0.0-wrr-submission** of the Python code used for data preprocessing, target construction, model training, baseline comparison, recursive forecasting, ablation summaries, and manuscript figure/table data generation is preserved at Zenodo: **TBD Zenodo software DOI**. The code is developed openly at https://github.com/ARETE-zzwl/jinsha-daily-drought-hybrid and released under the MIT License. The software was tested with Python 3.10+, PyTorch 2.0+, pandas 2.0+, NumPy 1.23+, scikit-learn 1.3+, and Matplotlib 3.7+.
 
 ## Suggested Reference Entries
 

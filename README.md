@@ -1,6 +1,6 @@
 # Physics-Deep Learning Hybrid Framework for Daily Drought Forecasting
 
-Suggested public repository name: `jinsha-daily-drought-hybrid`.
+Public repository: https://github.com/ARETE-zzwl/jinsha-daily-drought-hybrid
 
 This repository contains the code, processed station data, and publication table/figure data for the manuscript:
 
