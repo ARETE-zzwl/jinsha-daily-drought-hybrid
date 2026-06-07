@@ -1,0 +1,9 @@
+﻿model_id,model,rmse,category
+fusion_targetwise_blend_recursive,目标分项递归混合,0.2782267638419818,hybrid
+fusion_taskwise_recursive,任务维递归融合,0.3392504309634128,hybrid
+gbrt_multi_recursive,梯度提升树递归,0.3392504309634128,tree
+gru_daily_hybrid_recursive_regcal,GRU—Transformer 混合 + 校准,0.3820320522978858,hybrid
+ridge_recursive,岭回归递归,0.403435266561076,linear
+fusion_daily_stacking_recursive_regcal,堆叠递归 + 校准,0.4291955953632404,hybrid
+tcn_daily_hybrid_recursive,TCN—Transformer 混合递归,0.6296640831822292,hybrid
+persistence_recursive,持久性递归,0.9547587943927603,persist

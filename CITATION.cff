@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this software or data, please cite the archived release and the associated manuscript."
+title: "Physics-Deep Learning Hybrid Framework for Multi-Station Daily Drought Indices and Flash Drought Forecasting in the Jinsha River Basin"
+type: software
+authors:
+  - family-names: Zhu
+    given-names: Shibang
+  - family-names: Wang
+    given-names: Zhaocai
+  - family-names: Zhang
+    given-names: Gengxi
+  - family-names: Zhong
+    given-names: Huayu
+version: "1.0.0-wrr-submission"
+date-released: "2026-06-07"
+license: MIT
+repository-code: "TBD: GitHub repository URL"
+doi: "TBD: Zenodo DOI"
+abstract: "Code and processed data for a physics-deep learning hybrid framework that predicts custom 30-day and 90-day standardized water-balance drought indices and flash-drought early-risk probabilities across eight Jinsha River Basin stations."
+keywords:
+  - drought forecasting
+  - flash drought
+  - hydrology
+  - physics-guided machine learning
+  - deep learning
+  - water balance

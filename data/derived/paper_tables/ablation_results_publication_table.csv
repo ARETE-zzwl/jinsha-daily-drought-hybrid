@@ -1,0 +1,9 @@
+﻿实验,目的,run_tag_or_source,状态,one_step_stack_reg_macro_rmse,delta_vs_full_abs,delta_vs_full_pct,recursive_best_reg_macro_rmse,recursive_best_model,flash_f1,flash_auc
+完整模型,主模型 baseline,daily_abl_dem_off_full,ok,0.0391068339935317,0.0,0.0,0.3877482242622786,fusion_taskwise_recursive,0.4186046511627907,0.9669027634767596
+去掉物理支路,证明水分收支先验作用,daily_abl_dem_off_dl_only,ok,0.0643582642086878,0.0252514302151561,64.57037718607623,0.5428246185077765,gru_daily_hybrid_recursive,0.4814814814814814,0.9731868909066324
+去掉门控融合（固定 g=0.5）,证明自适应融合作用,abl_journal_fixed_gate,ok,0.0461040346933903,0.006997200699858597,17.89252666430614,0.32754137525562,fusion_meta_all_daily_recursive_regcal,0.5522388059701492,0.9720677712253112
+去掉三频分解,证明多尺度特征作用,abl_journal_no_modal,ok,0.0406606092103781,0.0015537752168463953,3.973155221676577,0.4174587135263906,fusion_meta_all_daily_recursive_regcal,0.4183673469387756,0.9717162261953052
+去掉站点嵌入,证明空间异质性表达作用,abl_journal_no_station_emb,ok,0.0441937400050716,0.005086906011539896,13.007716278902235,0.5329817118865834,fusion_meta_all_daily_recursive_regcal,0.381679389312977,0.973299218904386
+去掉深度支路（仅物理）,双支路对照,daily_abl_dem_off_phy_only,ok,0.2151185734777477,0.176011739484216,450.07923554570664,0.677879796500289,fusion_meta_all_daily_recursive_regcal,0.1026856240126382,0.9219237209689328
+仅 TCN 深度支路,证明双深度支路必要性（同训练、单路预测）,daily_abl_dem_off_full,derived,0.0583360883830797,0.019229254389548,49.171084503359516,,,,
+仅 GRU 深度支路,证明双深度支路必要性（同训练、单路预测）,daily_abl_dem_off_full,derived,0.0441062596041591,0.004999425610627398,12.7840203363287,,,,

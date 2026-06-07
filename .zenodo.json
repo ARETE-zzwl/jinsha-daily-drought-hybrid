@@ -1,0 +1,29 @@
+{
+  "title": "Physics-Deep Learning Hybrid Framework for Multi-Station Daily Drought Indices and Flash Drought Forecasting in the Jinsha River Basin",
+  "creators": [
+    {"name": "Zhu, Shibang"},
+    {"name": "Wang, Zhaocai"},
+    {"name": "Zhang, Gengxi"},
+    {"name": "Zhong, Huayu"}
+  ],
+  "description": "Code, processed daily station data, and curated manuscript table/figure data for a physics-deep learning hybrid framework for daily drought-index and flash-drought early-risk forecasting across eight stations in the Jinsha River Basin.",
+  "license": "MIT",
+  "keywords": [
+    "drought forecasting",
+    "flash drought",
+    "water balance",
+    "physics-guided machine learning",
+    "deep learning",
+    "Jinsha River Basin"
+  ],
+  "upload_type": "software",
+  "access_right": "open",
+  "version": "1.0.0-wrr-submission",
+  "related_identifiers": [
+    {
+      "identifier": "TBD: manuscript DOI after acceptance",
+      "relation": "isSupplementTo",
+      "scheme": "doi"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+results/runs/
+*.pt
+*.pth
+*.ckpt
+
+# Large complete prediction tables and archives should be deposited in Zenodo
+# or another archival repository, not committed to GitHub.
+predictions_daily_all_models*.csv
+predictions_daily_recursive_all_models*.csv
+*.zip
+*.7z
+*.tar
+*.tar.gz

@@ -1,0 +1,10 @@
+﻿model_id,model,rmse,category
+fusion_daily_stacking,深度堆叠融合,0.0381050350511404,hybrid
+gru_daily_hybrid,GRU—Transformer 混合,0.0422605561418668,hybrid
+fusion_meta_all_daily,元学习全候选,0.0430179962476129,hybrid
+linear_lstsq,多元最小二乘,0.0540462457374233,linear
+ridge,岭回归,0.0540870068796422,linear
+gbrt_multi,梯度提升树,0.0541011303486432,tree
+tcn_daily_hybrid,TCN—Transformer 混合,0.0582871789922978,hybrid
+persistence,持久性,0.0790106851179451,persist
+lstm_baseline,LSTM 基线,0.0803062582123147,deep

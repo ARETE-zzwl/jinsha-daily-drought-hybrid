@@ -1,0 +1,9 @@
+experiment_zh,experiment_en,purpose,status,implementation,run_tag_or_source,one_step_reg_macro_rmse_test,recursive_reg_macro_rmse_test,notes
+完整模型（主文）,Full model (main),主模型 baseline,已完成,journal_tier1_leakfree 全配置,01_main_journal_tier1_leakfree,0.0381,见 metrics_daily_model_comparison_recursive.csv,主文正式 run；堆叠融合 fusion_daily_stacking
+完整模型（消融批 full）,Full model (ablation batch),与 dl/phy 对照,已完成,--model-ablation-mode full,daily_abl_dem_off_full,0.0392,0.3877,λ_cmip=0；与主文设置略有差异，宜作结构对照
+去掉物理支路, w/o physics branch,证明水分收支先验,已完成（代理）,dl_only：g≡1 仅深度支路,daily_abl_dem_off_dl_only,0.0670,0.5428,非“删模块”而是 fusion_mode=dl_only；误差明显上升
+去掉深度支路（仅物理）, w/o deep branch (phy only),对照：无深度时表现,已完成,phy_only：g≡0 仅物理支路,daily_abl_dem_off_phy_only,0.2358,0.6779,idx30 RMSE 恶化最显著；支持双支路必要
+去掉门控融合（自适应）, w/o adaptive gating,证明自适应融合,部分完成,dl_only/phy_only 为固定门控而非样本自适应,同上,—,—,**未单独做** fixed-g 或 fixed 0.5 融合；现有结果可间接说明 full≪单支
+去掉三频/模态分解, w/o modal decomposition,证明多尺度特征,未做,需 top_k_per_base=0 或仅 8 维基变量,—,—,—,代码支持 --top-k-per-base，但仓库无已跑完对照 run
+去掉站点嵌入, w/o station embedding,证明空间异质性,未做,需改 DailyHybridModel（emb_dim=0 或零向量）,—,—,—,代码无现成开关；静态 3 维仍保留
+仅 TCN / 仅 GRU,TCN-only vs GRU-only,证明双深度支路,部分完成（结果可引用）,主 run 分别训练 TCN/GRU 单路 + 堆叠融合,01_main_journal_tier1_leakfree,TCN 0.0604 / GRU 0.0423 / Stack 0.0381,见 per_model_results,*_recursive,非“消融训练”而是同 run 内单路 vs 堆叠对比；堆叠优于任一路

@@ -1,0 +1,14 @@
+﻿paper_figure,csv_files,note
+图2,fig02_stations_lon_lat_elev.csv; fig02_monthly_*,研究区站点与月气候态热图
+图5,fig05_modal_scores_pivot.csv,模态全局得分
+图5b,fig05b_modal_schematic.csv,三频分解示意曲线
+图6,fig06_idx30_timeseries_long.csv,idx30 多模型一步序列
+图7,fig07_*.csv,ROC/PR/AUC/可靠性
+图9,fig10_per_station_rmse.csv,文件名 fig10_* 对应正文图9 分站点 RMSE
+图10,fig09_onestep_reg_macro_rmse.csv,文件名 fig09_* 对应正文图10 池化一步 RMSE
+图11,fig11_flash_f1_auc.csv,闪旱 F1/AUC
+图12,fig12_recursive_reg_macro_rmse.csv,递归池化 RMSE
+正文图13(IG),(见 shap_analysis IG npz),脚本中 fig13_*_scatter 为 generate_paper_figures 密度散点辅助数据
+脚本 fig13_*,fig13_*_scatter.csv,观测—预测散点（一步测试）
+§5.3 图14(SHAP),(排除),表格 SHAP 合成图；未在本脚本导出
+fig14_monthly_*,fig14_monthly_improvement_pct.csv,月度改进率热图数据，非 §5.3 图14

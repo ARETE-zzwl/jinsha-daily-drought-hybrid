@@ -1,0 +1,15 @@
+matplotlib>=3.7
+numpy>=1.23
+pandas>=2.0
+scikit-learn>=1.3
+torch>=2.0
+
+# Optional analysis/figure dependencies
+shap>=0.44
+SciencePlots>=2.0.0
+seaborn>=0.13
+
+# Optional modal decomposition backends. The code falls back to moving averages
+# when these are unavailable.
+EMD-signal>=1.6
+vmdpy>=0.2

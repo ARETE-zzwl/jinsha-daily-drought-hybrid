@@ -1,0 +1,36 @@
+{
+  "model_name_en": "Physics-deep learning hybrid framework (dual-branch gating + stacking fusion)",
+  "main_model_id": "fusion_daily_stacking",
+  "seq_len_days": 30,
+  "dynamic_features": 24,
+  "static_features": 3,
+  "station_embedding_dim": 8,
+  "model_dim": 96,
+  "tcn_layers": 2,
+  "gru_layers": 1,
+  "transformer_layers": 1,
+  "n_heads": 4,
+  "dropout": 0.1,
+  "gate_hidden_dim": 32,
+  "fusion_mode": "full",
+  "modal_decomposition": "moving-average three-frequency decomposition; top 2 modal components retained per base variable",
+  "base_meteorological_inputs": [
+    "pr",
+    "tmean",
+    "tmax",
+    "tmin",
+    "et0",
+    "wind",
+    "rad_net",
+    "rad_down"
+  ],
+  "modal_features": "For each base variable, low/mid/high components are scored on the training split and the top 2 are retained.",
+  "outputs": [
+    "idx_30",
+    "idx_90",
+    "flash_label probability",
+    "recursive multi-step predictions"
+  ],
+  "stacking": "Validation-stage linear blend of TCN-Transformer and GRU-Transformer outputs plus intercept.",
+  "run_tag": "journal_tier1_leakfree"
+}

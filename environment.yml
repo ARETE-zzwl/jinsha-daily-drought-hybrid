@@ -1,0 +1,18 @@
+name: jinsha-daily-drought-hybrid
+channels:
+  - conda-forge
+  - pytorch
+dependencies:
+  - python>=3.10
+  - matplotlib>=3.7
+  - numpy>=1.23
+  - pandas>=2.0
+  - scikit-learn>=1.3
+  - pytorch>=2.0
+  - seaborn>=0.13
+  - pip
+  - pip:
+      - shap>=0.44
+      - SciencePlots>=2.0.0
+      - EMD-signal>=1.6
+      - vmdpy>=0.2
