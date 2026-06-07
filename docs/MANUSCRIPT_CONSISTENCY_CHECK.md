@@ -45,4 +45,4 @@ This name is concise, avoids journal-specific wording, and captures the study ar
 
 ## Remaining Publication Metadata
 
-GitHub and Zenodo URLs/DOIs should be inserted into `CITATION.cff`, `.zenodo.json`, and `docs/OPEN_RESEARCH_STATEMENT.md` after the public repository and DOI-bearing archive are created.
+The public GitHub URL and Zenodo reserved DOI have been inserted. The manuscript DOI in `.zenodo.json` remains pending until journal acceptance. The Zenodo draft must still be published before `10.5281/zenodo.20583059` becomes registered and publicly resolvable.

@@ -21,7 +21,7 @@ results/example_run/            Main-run metrics and model-selection outputs fro
 docs/                           Data dictionary, reproducibility notes, and WRR statement draft
 ```
 
-Large full prediction tables and model checkpoints from the working project are intentionally not placed in the GitHub-ready package because some files exceed typical GitHub file-size limits. They are prepared for deposition in the archival Zenodo record.
+Large full prediction tables and model checkpoints from the working project are intentionally not placed in the GitHub-ready package because some files exceed typical GitHub file-size limits. They are uploaded to the Zenodo draft deposition with reserved DOI `10.5281/zenodo.20583059`; publish the Zenodo draft to register and activate the DOI.
 
 ## Main Data
 
@@ -100,8 +100,8 @@ Before submission or first public release:
 1. Publish this repository on GitHub or another public development platform.
 2. Create a versioned release, for example `v1.0-wrr-submission`.
 3. Archive that release on Zenodo and obtain a DOI.
-4. Deposit large prediction tables, checkpoints, and any restricted-review files in Zenodo or another trusted repository if they are needed for complete reproduction.
-5. Replace all `TBD` DOI placeholders in `CITATION.cff`, `.zenodo.json`, and `docs/OPEN_RESEARCH_STATEMENT.md`.
+4. Deposit large prediction tables and checkpoints in Zenodo if they are needed for complete reproduction.
+5. Publish the Zenodo draft deposition for `10.5281/zenodo.20583059` after final review, so the DOI becomes registered and public.
 
 ## License
 

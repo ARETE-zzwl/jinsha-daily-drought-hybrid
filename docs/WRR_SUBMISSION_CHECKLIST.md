@@ -8,7 +8,7 @@ Use this checklist before submitting the manuscript.
 - [ ] Release tag created, for example `v1.0.0-wrr-submission`.
 - [ ] Repository README includes installation, quick check, and reproduction commands.
 - [ ] `LICENSE`, `DATA_LICENSE.md`, `CITATION.cff`, and `.zenodo.json` are complete.
-- [ ] All `TBD` placeholders are replaced or intentionally left for post-acceptance metadata.
+- [x] All GitHub and Zenodo DOI placeholders are replaced; manuscript DOI remains pending post-acceptance metadata.
 - [ ] No local absolute paths are required by default runtime code.
 - [ ] No private files, credentials, editor folders, or oversized prediction tables are committed.
 
@@ -23,11 +23,12 @@ Use this checklist before submitting the manuscript.
 
 ## Software Preservation
 
-- [ ] GitHub repository is linked to Zenodo.
-- [ ] Zenodo release has a DOI.
-- [ ] The Zenodo record includes the same authors as the manuscript or the appropriate software/data creators.
-- [ ] The Zenodo record includes license, keywords, description, and related manuscript identifier.
-- [ ] If large prediction tables/checkpoints are needed, they are deposited in Zenodo or a trusted repository, not GitHub.
+- [x] GitHub repository URL is recorded in Zenodo draft metadata.
+- [x] Zenodo draft has reserved DOI `10.5281/zenodo.20583059`.
+- [x] The Zenodo draft includes the same authors as the manuscript.
+- [x] The Zenodo draft includes license, keywords, and description.
+- [x] Large prediction tables/checkpoints are uploaded to the Zenodo draft, not GitHub.
+- [ ] Publish the Zenodo draft after final review so the DOI is registered and publicly resolvable.
 
 ## Manuscript
 

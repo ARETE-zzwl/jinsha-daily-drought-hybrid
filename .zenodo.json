@@ -21,9 +21,9 @@
   "version": "1.0.0-wrr-submission",
   "related_identifiers": [
     {
-      "identifier": "TBD: manuscript DOI after acceptance",
-      "relation": "isSupplementTo",
-      "scheme": "doi"
+      "identifier": "https://github.com/ARETE-zzwl/jinsha-daily-drought-hybrid",
+      "relation": "isIdenticalTo",
+      "scheme": "url"
     }
   ]
 }

@@ -15,7 +15,7 @@ version: "1.0.0-wrr-submission"
 date-released: "2026-06-07"
 license: MIT
 repository-code: "https://github.com/ARETE-zzwl/jinsha-daily-drought-hybrid"
-doi: "TBD: Zenodo DOI"
+doi: "10.5281/zenodo.20583059"
 abstract: "Code and processed data for a physics-deep learning hybrid framework that predicts custom 30-day and 90-day standardized water-balance drought indices and flash-drought early-risk probabilities across eight Jinsha River Basin stations."
 keywords:
   - drought forecasting
