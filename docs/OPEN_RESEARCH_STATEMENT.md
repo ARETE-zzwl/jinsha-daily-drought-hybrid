@@ -1,6 +1,6 @@
-# Draft Open Research Statement for WRR
+# Open Research Statement for WRR
 
-Replace the manuscript DOI placeholder after acceptance. The GitHub repository URL and Zenodo reserved DOI have been inserted below.
+Replace the manuscript DOI placeholder after acceptance. The GitHub repository URL and Zenodo DOI have been inserted below.
 
 ## Data Availability Statement
 
@@ -20,4 +20,4 @@ Zhu, S., Wang, Z., Zhang, G., & Zhong, H. (2026). *Processed daily station and m
 
 Zhu, S., Wang, Z., Zhang, G., & Zhong, H. (2026). *Physics-deep learning hybrid drought forecasting code* (Version 1.0.0-wrr-submission) [Software]. Zenodo. https://doi.org/10.5281/zenodo.20583059
 
-Note: `10.5281/zenodo.20583059` is currently reserved in an unpublished Zenodo draft. The DOI becomes registered and publicly resolvable after the draft is published.
+The Zenodo record includes the tagged source archive, processed station data, manuscript-derived table/figure data, full prediction tables, and trained model checkpoints.

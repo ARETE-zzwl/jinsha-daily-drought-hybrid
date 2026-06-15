@@ -9,8 +9,8 @@ Use this checklist before submitting the manuscript.
 - [x] Repository README includes installation, quick check, and reproduction commands.
 - [x] `LICENSE`, `DATA_LICENSE.md`, `CITATION.cff`, and `.zenodo.json` are complete.
 - [x] All GitHub and Zenodo DOI placeholders are replaced; manuscript DOI remains pending post-acceptance metadata.
-- [ ] No local absolute paths are required by default runtime code.
-- [ ] No private files, credentials, editor folders, or oversized prediction tables are committed.
+- [x] No local absolute paths are required by default runtime code.
+- [x] No private files, credentials, editor folders, or oversized prediction tables are committed.
 
 ## Data
 
@@ -23,13 +23,13 @@ Use this checklist before submitting the manuscript.
 
 ## Software Preservation
 
-- [x] GitHub repository URL is recorded in Zenodo draft metadata.
-- [x] Zenodo draft has reserved DOI `10.5281/zenodo.20583059`.
-- [x] The Zenodo draft includes the same authors as the manuscript.
-- [x] The Zenodo draft includes license, keywords, and description.
-- [x] Source archive for the tagged GitHub release is uploaded to the Zenodo draft.
-- [x] Large prediction tables/checkpoints are uploaded to the Zenodo draft, not GitHub.
-- [ ] Publish the Zenodo draft after final review so the DOI is registered and publicly resolvable.
+- [x] GitHub repository URL is recorded in Zenodo metadata.
+- [x] Zenodo DOI is registered: `10.5281/zenodo.20583059`.
+- [x] The Zenodo record includes the same authors as the manuscript.
+- [x] The Zenodo record includes license, keywords, and description.
+- [x] Source archive for the tagged GitHub release is uploaded to Zenodo.
+- [x] Large prediction tables/checkpoints are uploaded to Zenodo, not GitHub.
+- [x] Zenodo record is published and publicly resolvable.
 
 ## Manuscript
 

@@ -18,10 +18,10 @@ data/processed/station_metadata.csv
 data/derived/paper_tables/      Curated CSVs supporting manuscript tables and result summaries
 data/derived/figure_data/       Curated CSVs used to recreate manuscript figures
 results/example_run/            Main-run metrics and model-selection outputs from the manuscript run
-docs/                           Data dictionary, reproducibility notes, and WRR statement draft
+docs/                           Data dictionary, reproducibility notes, and WRR open-research statement
 ```
 
-Large full prediction tables and model checkpoints from the working project are intentionally not placed in the GitHub-ready package because some files exceed typical GitHub file-size limits. The Zenodo draft deposition with reserved DOI `10.5281/zenodo.20583059` includes those large artifacts plus a source-code archive for the tagged GitHub release; publish the Zenodo draft to register and activate the DOI.
+Large full prediction tables and model checkpoints from the working project are intentionally not placed in the GitHub-ready package because some files exceed typical GitHub file-size limits. The Zenodo record at https://doi.org/10.5281/zenodo.20583059 includes those large artifacts plus a source-code archive for the tagged GitHub release.
 
 ## Main Data
 
@@ -95,12 +95,11 @@ Outputs are written to `results/runs/`.
 
 ## Archival Release Plan
 
-Before submission or first public release:
+For submission and archival review:
 
 1. Public GitHub repository: https://github.com/ARETE-zzwl/jinsha-daily-drought-hybrid
 2. Versioned release: https://github.com/ARETE-zzwl/jinsha-daily-drought-hybrid/releases/tag/v1.0.0-wrr-submission
-3. Zenodo draft deposition: source archive, full prediction tables, and model checkpoints uploaded under reserved DOI `10.5281/zenodo.20583059`.
-4. Publish the Zenodo draft deposition after final review, so the DOI becomes registered and public.
+3. Zenodo archival record: source archive, full prediction tables, and model checkpoints at https://doi.org/10.5281/zenodo.20583059.
 
 ## License
 
