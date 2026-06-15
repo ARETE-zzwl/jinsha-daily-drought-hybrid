@@ -99,7 +99,7 @@ def main() -> None:
         type=Path,
         default=Path(__file__).resolve().parents[2] / "zenodo_artifacts",
     )
-    parser.add_argument("--version", default="v1.0.0-wrr-submission")
+    parser.add_argument("--version", default="v1.0.1-wrr-submission")
     args = parser.parse_args()
     archive = package_assets(args.source_run_dir, args.output_dir, args.version)
     print(archive)

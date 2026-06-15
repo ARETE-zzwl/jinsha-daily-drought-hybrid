@@ -21,7 +21,7 @@ results/example_run/            Main-run metrics and model-selection outputs fro
 docs/                           Data dictionary, reproducibility notes, and WRR open-research statement
 ```
 
-Large full prediction tables and model checkpoints from the working project are intentionally not placed in the GitHub-ready package because some files exceed typical GitHub file-size limits. The Zenodo record at https://doi.org/10.5281/zenodo.20583059 includes those large artifacts plus a source-code archive for the tagged GitHub release.
+Large full prediction tables, model checkpoints, and station-matched CMIP6 auxiliary training sequences from the working project are intentionally not placed in the GitHub-ready package because they are large generated or derived artifacts. The Zenodo record at https://doi.org/10.5281/zenodo.20705450 includes those artifacts plus a source-code archive for the tagged GitHub release.
 
 ## Main Data
 
@@ -57,6 +57,18 @@ python scripts/check_package.py
 Expected result: the script prints the eight station slugs, row counts, static metadata dimensions, and selected target columns produced from the processed data.
 
 ## Reproduce the Main Experiment
+
+For the exact manuscript protocol, first download
+`jinsha-daily-drought-hybrid-v1.0.1-wrr-submission-cmip6-station-contexts.zip`
+from Zenodo and extract it into the repository root. The expected path is:
+
+```text
+data/external/cmip_station_daily_extract/
+```
+
+If these CMIP6 files are absent, the code still runs, but the CMIP6 auxiliary
+regularization context is skipped and the run is not the exact manuscript
+training protocol. See [docs/CMIP6_AUXILIARY_DATA.md](docs/CMIP6_AUXILIARY_DATA.md).
 
 The main training entry point is:
 
@@ -98,8 +110,8 @@ Outputs are written to `results/runs/`.
 For submission and archival review:
 
 1. Public GitHub repository: https://github.com/ARETE-zzwl/jinsha-daily-drought-hybrid
-2. Versioned release: https://github.com/ARETE-zzwl/jinsha-daily-drought-hybrid/releases/tag/v1.0.0-wrr-submission
-3. Zenodo archival record: source archive, full prediction tables, and model checkpoints at https://doi.org/10.5281/zenodo.20583059.
+2. Versioned release: https://github.com/ARETE-zzwl/jinsha-daily-drought-hybrid/releases/tag/v1.0.1-wrr-submission
+3. Zenodo archival record: source archive, full prediction tables, model checkpoints, and CMIP6 auxiliary station contexts at https://doi.org/10.5281/zenodo.20705450.
 
 ## License
 

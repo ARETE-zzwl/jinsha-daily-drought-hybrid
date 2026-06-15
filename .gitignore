@@ -8,6 +8,7 @@ venv/
 env/
 
 results/runs/
+data/external/cmip_station_daily_extract/
 *.pt
 *.pth
 *.ckpt

@@ -45,4 +45,4 @@ This name is concise, avoids journal-specific wording, and captures the study ar
 
 ## Remaining Publication Metadata
 
-The public GitHub URL and Zenodo DOI have been inserted. The manuscript DOI in `.zenodo.json` remains pending until journal acceptance. The Zenodo record includes both the tagged source archive and large generated artifacts at https://doi.org/10.5281/zenodo.20583059.
+The public GitHub URL and Zenodo DOI have been inserted. The manuscript DOI in `.zenodo.json` remains pending until journal acceptance. The Zenodo record includes the tagged source archive, station-matched CMIP6 auxiliary contexts, full prediction tables, and model checkpoints at https://doi.org/10.5281/zenodo.20705450.

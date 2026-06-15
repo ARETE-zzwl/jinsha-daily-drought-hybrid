@@ -70,8 +70,45 @@ persist_t = max(idx_30,t-4 ... idx_30,t) <= -1.0
 flash_label_t = rapid_t and persist_t
 ```
 
+## CMIP6 Auxiliary Station Contexts
+
+Files are archived in Zenodo under:
+
+```text
+jinsha-daily-drought-hybrid-v1.0.1-wrr-submission-cmip6-station-contexts.zip
+```
+
+After extraction, the expected repository path is:
+
+```text
+data/external/cmip_station_daily_extract/*_cmip_daily_bias_corrected.csv
+```
+
+These files are derived from NEX-GDDP-CMIP6 daily downscaled climate-model
+series and are used only for training-stage auxiliary regularization. They are
+not used as validation/test predictors.
+
+| Column | Description | Unit |
+| --- | --- | --- |
+| `station_slug` | ASCII station identifier used by the code | unitless |
+| `station` | Original station name | unitless |
+| `date` | CMIP6 daily timestamp | YYYY-MM-DD |
+| `scenario` | `historical`, `ssp126`, `ssp245`, or `ssp585` | unitless |
+| `pr` | Station-extracted daily precipitation before local bias correction | mm day-1 |
+| `tasmax` | Daily maximum near-surface air temperature before local bias correction | deg C |
+| `tasmin` | Daily minimum near-surface air temperature before local bias correction | deg C |
+| `tas` | Daily mean near-surface air temperature before local bias correction | deg C |
+| `pr_bc` | Locally bias-corrected daily precipitation used by the training code | mm day-1 |
+| `tasmax_bc` | Locally bias-corrected daily maximum temperature used by the training code | deg C |
+| `tasmin_bc` | Locally bias-corrected daily minimum temperature used by the training code | deg C |
+| `tas_bc` | Locally bias-corrected daily mean temperature | deg C |
+
 ## Derived Manuscript Data
 
 `data/derived/paper_tables/` contains compact CSVs supporting manuscript result tables, pooled metrics, station-level metrics, ablation summaries, gate weights, and observed-vs-predicted slices.
 
 `data/derived/figure_data/` contains compact CSVs used for figure rendering, including study-area summaries, modal feature scores, one-step and recursive metric summaries, flash-drought classification curves, and SHAP/feature-importance summaries.
+
+Files ending in `_en.csv` are English companion versions of selected summary
+tables/manifests for international review. They do not replace the original
+manuscript-facing CSVs.

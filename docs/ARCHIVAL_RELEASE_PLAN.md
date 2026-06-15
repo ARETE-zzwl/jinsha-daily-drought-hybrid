@@ -3,7 +3,7 @@
 This GitHub repository contains code, processed inputs, compact result tables,
 and figure-source CSVs. A source archive for the tagged GitHub release and the
 larger generated artifacts have been packaged and uploaded to the Zenodo record
-at https://doi.org/10.5281/zenodo.20583059.
+at https://doi.org/10.5281/zenodo.20705450.
 
 ## Recommended Zenodo Software Record
 
@@ -18,9 +18,9 @@ Archive the full GitHub release:
 
 Archived source file in the Zenodo record:
 
-- `jinsha-daily-drought-hybrid-v1.0.0-wrr-submission-source.zip`
+- `jinsha-daily-drought-hybrid-v1.0.1-wrr-submission-source.zip`
 
-Release tag: `v1.0.0-wrr-submission`
+Release tag: `v1.0.1-wrr-submission`
 
 ## Recommended Zenodo Data/Output Record
 
@@ -33,7 +33,9 @@ The Zenodo record also contains these large reproducibility artifacts:
 - Model checkpoints:
   `best_checkpoint_tcn_daily_hybrid.pt`,
   `best_checkpoint_gru_daily_hybrid.pt`
-- Optional full per-model prediction CSVs from `per_model_results/`, SHAP detail arrays, and bias-corrected CMIP station daily files can be added later if reviewers need exact regeneration beyond the compact CSVs already included in GitHub.
+- Station-matched CMIP6 auxiliary training contexts:
+  `jinsha-daily-drought-hybrid-v1.0.1-wrr-submission-cmip6-station-contexts.zip`
+- Optional full per-model prediction CSVs from `per_model_results/` and SHAP detail arrays can be added later if reviewers need exact regeneration beyond the compact CSVs already included in GitHub.
 
 ## GitHub Exclusions
 

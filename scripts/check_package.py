@@ -12,7 +12,7 @@ if str(ROOT) not in sys.path:
 
 import pandas as pd
 
-from drought_hybrid.config import DATA_DIR, DEM_SUMMARY_FILE
+from drought_hybrid.config import CMIP_DIR, DATA_DIR, DEM_SUMMARY_FILE
 
 
 def safe_series(x: pd.Series) -> pd.Series:
@@ -70,6 +70,23 @@ def main() -> int:
         total_rows += len(df)
 
     print(f"Total station rows: {total_rows}")
+
+    cmip_files = sorted(CMIP_DIR.glob("*_cmip_daily_bias_corrected.csv"))
+    if cmip_files:
+        if len(cmip_files) != 8:
+            raise RuntimeError(f"Expected 8 CMIP6 auxiliary files, found {len(cmip_files)}")
+        cmip_rows = 0
+        cmip_scenarios = set()
+        for path in cmip_files:
+            cmip = pd.read_csv(path, usecols=["date", "scenario", "pr_bc", "tasmax_bc", "tasmin_bc"])
+            if cmip.empty:
+                raise RuntimeError(f"CMIP6 auxiliary file is empty: {path}")
+            cmip_rows += len(cmip)
+            cmip_scenarios.update(cmip["scenario"].astype(str).unique().tolist())
+        print(f"CMIP6 auxiliary files: {len(cmip_files)} files, {cmip_rows} rows")
+        print(f"CMIP6 scenarios: {', '.join(sorted(cmip_scenarios))}")
+    else:
+        print("CMIP6 auxiliary files: not found; exact manuscript training requires the Zenodo CMIP6 archive.")
 
     try:
         from drought_hybrid.data import available_stations, load_station_static_features, read_station_data

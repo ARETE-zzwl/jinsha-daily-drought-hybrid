@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "jinsha-daily-drought-hybrid"
-version = "1.0.0"
+version = "1.0.1"
 description = "Physics-deep learning hybrid daily drought-index and flash-drought risk forecasting."
 readme = "README.md"
 requires-python = ">=3.10"

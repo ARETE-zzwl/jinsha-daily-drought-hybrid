@@ -1,13 +1,13 @@
 {
-  "title": "Physics-Deep Learning Hybrid Framework for Multi-Station Daily Drought Indices and Flash Drought Forecasting in the Jinsha River Basin",
+  "title": "Reproducibility package for a physics-deep learning daily drought forecasting framework",
   "creators": [
     {"name": "Zhu, Shibang"},
     {"name": "Wang, Zhaocai"},
     {"name": "Zhang, Gengxi"},
     {"name": "Zhong, Huayu"}
   ],
-  "description": "Code, processed daily station data, and curated manuscript table/figure data for a physics-deep learning hybrid framework for daily drought-index and flash-drought early-risk forecasting across eight stations in the Jinsha River Basin.",
-  "license": "MIT",
+  "description": "Code, processed daily station data, station-matched CMIP6 auxiliary training contexts, curated manuscript table/figure data, full prediction tables, and model checkpoints for a physics-deep learning hybrid framework for daily drought-index and flash-drought early-risk forecasting across eight stations in the Jinsha River Basin.",
+  "license": "cc-by-4.0",
   "keywords": [
     "drought forecasting",
     "flash drought",
@@ -16,9 +16,9 @@
     "deep learning",
     "Jinsha River Basin"
   ],
-  "upload_type": "software",
+  "upload_type": "dataset",
   "access_right": "open",
-  "version": "1.0.0-wrr-submission",
+  "version": "1.0.1-wrr-submission",
   "related_identifiers": [
     {
       "identifier": "https://github.com/ARETE-zzwl/jinsha-daily-drought-hybrid",

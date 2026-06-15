@@ -1,0 +1,14 @@
+paper_figure,csv_files,note
+Figure 2,fig02_stations_lon_lat_elev.csv; fig02_monthly_*,Study-area stations and monthly climatology summaries
+Figure 5,fig05_modal_scores_pivot.csv,Global scores for modal components
+Figure 5b,fig05b_modal_schematic.csv,Three-frequency decomposition schematic
+Figure 6,fig06_idx30_timeseries_long.csv,One-step idx30 time series for selected models
+Figure 7,fig07_*.csv,"ROC, PR, AUC, and reliability data"
+Figure 9,fig10_per_station_rmse.csv,Per-station RMSE; file prefix retained from generation script
+Figure 10,fig09_onestep_reg_macro_rmse.csv,Pooled one-step reg_macro RMSE; file prefix retained from generation script
+Figure 11,fig11_flash_f1_auc.csv,Flash-drought F1 and AUC
+Figure 12,fig12_recursive_reg_macro_rmse.csv,Recursive pooled reg_macro RMSE
+Manuscript Figure 13 (IG),not included; see manuscript plotting workflow,Integrated-gradient figure source not exported as compact CSV
+Generated fig13_*,fig13_*_scatter.csv,Observed-predicted scatter data for one-step test predictions
+Section 5.3 SHAP figure,not included,Composite SHAP table figure not exported by this helper
+Generated fig14_monthly_*,fig14_monthly_improvement_pct.csv,"Monthly improvement heatmap data, not Section 5.3 Figure 14"

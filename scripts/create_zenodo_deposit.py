@@ -5,6 +5,7 @@ Requirements:
     if using --publish, deposit:actions.
   - Run scripts/prepare_zenodo_assets.py first.
   - Create the release source archive with git archive, or pass --source-zip.
+  - Prepare the optional CMIP6 auxiliary archive, or pass --cmip-zip.
 
 By default this creates an unpublished draft and reserves a DOI. Publishing is
 irreversible, so use --publish only after reviewing the draft metadata/files.
@@ -102,14 +103,21 @@ def main() -> None:
         type=Path,
         default=Path(__file__).resolve().parents[2]
         / "zenodo_artifacts"
-        / "jinsha-daily-drought-hybrid-v1.0.0-wrr-submission-source.zip",
+        / "jinsha-daily-drought-hybrid-v1.0.1-wrr-submission-source.zip",
     )
     parser.add_argument(
         "--artifact-zip",
         type=Path,
         default=Path(__file__).resolve().parents[2]
         / "zenodo_artifacts"
-        / "jinsha-daily-drought-hybrid-v1.0.0-wrr-submission-large-artifacts.zip",
+        / "jinsha-daily-drought-hybrid-v1.0.1-wrr-submission-large-artifacts.zip",
+    )
+    parser.add_argument(
+        "--cmip-zip",
+        type=Path,
+        default=Path(__file__).resolve().parents[2]
+        / "zenodo_artifacts"
+        / "jinsha-daily-drought-hybrid-v1.0.1-wrr-submission-cmip6-station-contexts.zip",
     )
     parser.add_argument("--api-url", default="https://zenodo.org/api")
     parser.add_argument("--publish", action="store_true", help="Publish immediately. This is irreversible.")
@@ -120,7 +128,7 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    for archive in (args.source_zip, args.artifact_zip):
+    for archive in (args.source_zip, args.artifact_zip, args.cmip_zip):
         if not archive.exists():
             raise FileNotFoundError(archive)
 
@@ -129,6 +137,7 @@ def main() -> None:
     upload_results = [
         upload_file(deposition, args.source_zip, token),
         upload_file(deposition, args.artifact_zip, token),
+        upload_file(deposition, args.cmip_zip, token),
     ]
 
     result = {"deposition": deposition, "uploads": upload_results, "published": None}

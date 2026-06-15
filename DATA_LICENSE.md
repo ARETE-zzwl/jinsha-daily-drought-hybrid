@@ -10,6 +10,15 @@ Processed station data and derived manuscript data in `data/processed/` and
 `data/derived/` are released under the Creative Commons Attribution 4.0
 International License (CC BY 4.0).
 
-When using these data, cite the archived Zenodo release and the associated
+The station-matched CMIP6 auxiliary files archived in Zenodo were derived from
+the NEX-GDDP-CMIP6 daily downscaled climate-model dataset. They are included to
+support reproduction of the manuscript's training-stage auxiliary
+regularization terms and should be cited together with the original
+NEX-GDDP-CMIP6 data source. Station elevation metadata were derived from
+Copernicus DEM 30 m products and should be cited according to Copernicus DEM
+guidance.
+
+When using these data, cite the archived Zenodo release, original public data
+sources where applicable, and the associated
 manuscript. If you redistribute modified data, indicate that changes were made
 and preserve attribution to the original authors.

@@ -5,7 +5,7 @@ Use this checklist before submitting the manuscript.
 ## Repository
 
 - [x] Public GitHub repository created from this directory: https://github.com/ARETE-zzwl/jinsha-daily-drought-hybrid
-- [x] Release tag created: https://github.com/ARETE-zzwl/jinsha-daily-drought-hybrid/releases/tag/v1.0.0-wrr-submission
+- [x] Release tag created: https://github.com/ARETE-zzwl/jinsha-daily-drought-hybrid/releases/tag/v1.0.1-wrr-submission
 - [x] Repository README includes installation, quick check, and reproduction commands.
 - [x] `LICENSE`, `DATA_LICENSE.md`, `CITATION.cff`, and `.zenodo.json` are complete.
 - [x] All GitHub and Zenodo DOI placeholders are replaced; manuscript DOI remains pending post-acceptance metadata.
@@ -24,19 +24,20 @@ Use this checklist before submitting the manuscript.
 ## Software Preservation
 
 - [x] GitHub repository URL is recorded in Zenodo metadata.
-- [x] Zenodo DOI is registered: `10.5281/zenodo.20583059`.
+- [x] Zenodo DOI is registered: `10.5281/zenodo.20705450`.
 - [x] The Zenodo record includes the same authors as the manuscript.
 - [x] The Zenodo record includes license, keywords, and description.
 - [x] Source archive for the tagged GitHub release is uploaded to Zenodo.
 - [x] Large prediction tables/checkpoints are uploaded to Zenodo, not GitHub.
+- [x] Station-matched CMIP6 auxiliary training contexts are uploaded to Zenodo.
 - [x] Zenodo record is published and publicly resolvable.
 
 ## Manuscript
 
-- [ ] Open Research section contains a Data Availability Statement.
-- [ ] Open Research section contains a Software Availability Statement.
-- [ ] Statements include direct DOI links, license/access conditions, and the GitHub development link.
-- [ ] Data/software records are cited in the References section, not only linked in the text.
+- [x] Open Research section text is prepared in `docs/OPEN_RESEARCH_STATEMENT.md`.
+- [x] Software Availability Statement text is prepared in `docs/OPEN_RESEARCH_STATEMENT.md`.
+- [x] Statements include direct DOI links, license/access conditions, and the GitHub development link.
+- [x] Reference entry text is prepared in `docs/OPEN_RESEARCH_STATEMENT.md` and `docs/MANUSCRIPT_INSERTS_FOR_WRR.md`.
 - [ ] The Methods section describes how released data/software map to the analysis in the paper.
 
 ## Basic Verification

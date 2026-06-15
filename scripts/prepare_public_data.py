@@ -1,4 +1,4 @@
-"""Prepare publication-ready station CSVs from the working-project files.
+"""Prepare publication-ready station CSVs from working-project station files.
 
 This helper is included for transparency. The open repository stores the
 processed station files produced by this script, so reviewers normally do not
@@ -77,14 +77,14 @@ def prepare_station_files(source_dir: Path, metadata_file: Path, output_dir: Pat
     meta_rows = []
 
     for station_name, (slug, station_en) in STATIONS.items():
-        src = source_dir / f"{station_name}_merged_data.csv"
-        if not src.exists():
-            raise FileNotFoundError(src)
+        source_file = source_dir / f"{station_name}_merged_data.csv"
+        if not source_file.exists():
+            raise FileNotFoundError(source_file)
 
-        df = pd.read_csv(src).rename(columns=COLUMN_MAP)
+        df = pd.read_csv(source_file).rename(columns=COLUMN_MAP)
         missing = [col for col in COLUMN_MAP.values() if col not in df.columns]
         if missing:
-            raise ValueError(f"{src} is missing mapped columns: {missing}")
+            raise ValueError(f"{source_file} is missing mapped columns: {missing}")
 
         out = df[list(COLUMN_MAP.values())].copy()
         out["date"] = pd.to_datetime(out["date"]).dt.strftime("%Y-%m-%d")
@@ -94,15 +94,15 @@ def prepare_station_files(source_dir: Path, metadata_file: Path, output_dir: Pat
         out = out[ORDERED_COLUMNS]
         out.to_csv(output_dir / f"{slug}_daily.csv", index=False, encoding="utf-8")
 
-        m = metadata[metadata["station"] == station_name]
-        if len(m) == 0:
+        meta = metadata[metadata["station"] == station_name]
+        if len(meta) == 0:
             elev = float("nan")
             lon = float(out["longitude"].iloc[0])
             lat = float(out["latitude"].iloc[0])
         else:
-            elev = float(m["elevation_m"].iloc[0])
-            lon = float(m["longitude"].iloc[0])
-            lat = float(m["latitude"].iloc[0])
+            elev = float(meta["elevation_m"].iloc[0])
+            lon = float(meta["longitude"].iloc[0])
+            lat = float(meta["latitude"].iloc[0])
         meta_rows.append(
             {
                 "station_slug": slug,
