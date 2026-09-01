@@ -5,7 +5,7 @@ Use this checklist before submitting the manuscript.
 ## Repository
 
 - [x] Public GitHub repository created from this directory: https://github.com/ARETE-zzwl/jinsha-daily-drought-hybrid
-- [ ] Revision release tag created: https://github.com/ARETE-zzwl/jinsha-daily-drought-hybrid/releases/tag/v1.1.0-wrr-revision
+- [x] Revision release tag created: https://github.com/ARETE-zzwl/jinsha-daily-drought-hybrid/releases/tag/v1.1.0-wrr-revision
 - [x] Repository README includes installation, quick check, and reproduction commands.
 - [x] `LICENSE`, `DATA_LICENSE.md`, `CITATION.cff`, and `.zenodo.json` are complete.
 - [x] All GitHub and Zenodo DOI placeholders are replaced; manuscript DOI remains pending post-acceptance metadata.
@@ -27,12 +27,12 @@ Use this checklist before submitting the manuscript.
 
 - [x] GitHub repository URL is recorded in Zenodo metadata.
 - [x] Zenodo revision DOI is reserved: `10.5281/zenodo.22232487`.
-- [ ] The Zenodo revision record includes the five manuscript authors in manuscript order.
-- [ ] The Zenodo revision record includes updated license, keywords, and cross-basin description.
-- [ ] Source archive for revision tag `v1.1.0-wrr-revision` is uploaded to Zenodo.
-- [ ] Upper Yellow River normalized data, full prediction tables, and checkpoints are uploaded to Zenodo.
+- [x] The Zenodo revision record includes the five manuscript authors in manuscript order.
+- [x] The Zenodo revision record includes updated license, keywords, and cross-basin description.
+- [x] Source archive for revision tag `v1.1.0-wrr-revision` is uploaded to Zenodo.
+- [x] Upper Yellow River normalized data, full prediction tables, and checkpoints are uploaded to Zenodo.
 - [x] Station-matched CMIP6 auxiliary training contexts are preserved in the version chain.
-- [ ] Zenodo revision record is published and publicly resolvable.
+- [x] Zenodo revision record is published and publicly resolvable: https://doi.org/10.5281/zenodo.22232487.
 
 ## Manuscript
 
