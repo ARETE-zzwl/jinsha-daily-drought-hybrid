@@ -37,9 +37,13 @@ The Zenodo record also contains these large reproducibility artifacts:
   `jinsha-daily-drought-hybrid-v1.0.1-wrr-submission-cmip6-station-contexts.zip`
 - Normalized 16-station Upper Yellow River inputs:
   `jinsha-daily-drought-hybrid-v1.1.0-wrr-revision-upper-yellow-data.zip`
-- Full Upper Yellow River zero-shot and local-recalibration predictions,
-  checkpoints, metrics, model-selection files, and logs:
-  `jinsha-daily-drought-hybrid-v1.1.0-wrr-revision-upper-yellow-artifacts.zip`
+- Upper Yellow River checkpoints, metrics, model-selection files, logs, and
+  zero-shot transfer assets:
+  `jinsha-daily-drought-hybrid-v1.1.0-wrr-revision-upper-yellow-support.zip`
+- Complete Upper Yellow River zero-shot and local-recalibration predictions,
+  partitioned by station without sampling or rounding:
+  `jinsha-daily-drought-hybrid-v1.1.0-wrr-revision-upper-yellow-predictions-part-01.zip`
+  through `...part-04.zip`
 - Optional full per-model prediction CSVs from `per_model_results/` and SHAP detail arrays can be added later if reviewers need exact regeneration beyond the compact CSVs already included in GitHub.
 
 ## GitHub Exclusions

@@ -104,12 +104,19 @@ Outputs are written to `results/runs/`.
 
 ## Upper Yellow River External Validation
 
-Download these two archives from Zenodo and extract both into the repository root:
+Download the data and support archives from Zenodo and extract both into the
+repository root:
 
 ```text
 jinsha-daily-drought-hybrid-v1.1.0-wrr-revision-upper-yellow-data.zip
-jinsha-daily-drought-hybrid-v1.1.0-wrr-revision-upper-yellow-artifacts.zip
+jinsha-daily-drought-hybrid-v1.1.0-wrr-revision-upper-yellow-support.zip
 ```
+
+The full prediction tables are partitioned by station across four additional
+Zenodo files named `...upper-yellow-predictions-part-01.zip` through
+`...part-04.zip`. The parts jointly contain every original row without sampling
+or numeric rounding. The support archive includes `SPLIT_ARCHIVE_README.md` with
+the exact reconstruction instructions.
 
 Check the external data before running any model:
 

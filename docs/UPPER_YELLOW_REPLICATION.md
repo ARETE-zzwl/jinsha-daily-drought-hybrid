@@ -40,19 +40,22 @@ data/external/upper_yellow_station_daily/
 data/external/upper_yellow_station_metadata.csv
 ```
 
-Extract the external-validation artifact archive into the repository root. It
+Extract the external-validation support archive into the repository root. It
 creates:
 
 ```text
 results/archived/jinsha_no_station_embedding/
-results/archived/upper_yellow_local_recalibration/
-results/archived/upper_yellow_zero_shot/
+results/archived/upper_yellow_local_recalibration/  # metrics/checkpoints/logs
+results/archived/upper_yellow_zero_shot/             # metrics/protocol
 ```
 
-The artifact archive includes full one-step and recursive prediction tables,
-pooled and per-station metrics, selected features, stacking weights, archived
-zero-shot standardization parameters, training logs, and TCN/GRU checkpoints.
-GitHub contains only code and compact main-study outputs; large generated files
+The support archive includes pooled and per-station metrics, selected features,
+stacking weights, archived zero-shot standardization parameters, training logs,
+and TCN/GRU checkpoints. Full one-step and recursive predictions are partitioned
+by station across `upper-yellow-predictions-part-01.zip` through `part-04.zip`.
+Together the four files contain every original prediction row without sampling
+or numeric rounding; `SPLIT_ARCHIVE_README.md` describes reconstruction. GitHub
+contains only code and compact main-study outputs, while large generated files
 remain in Zenodo.
 
 ## Reported Results
