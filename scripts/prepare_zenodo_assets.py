@@ -97,9 +97,9 @@ def main() -> None:
     parser.add_argument(
         "--output-dir",
         type=Path,
-        default=Path(__file__).resolve().parents[2] / "zenodo_artifacts",
+        default=Path(__file__).resolve().parents[2] / "zenodo_artifacts_v1.1.0",
     )
-    parser.add_argument("--version", default="v1.0.1-wrr-submission")
+    parser.add_argument("--version", default="v1.1.0-wrr-revision")
     args = parser.parse_args()
     archive = package_assets(args.source_run_dir, args.output_dir, args.version)
     print(archive)

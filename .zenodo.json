@@ -3,10 +3,11 @@
   "creators": [
     {"name": "Zhu, Shibang"},
     {"name": "Wang, Zhaocai"},
-    {"name": "Zhang, Gengxi"},
-    {"name": "Zhong, Huayu"}
+    {"name": "Wu, Junhao"},
+    {"name": "Ding, Weijie"},
+    {"name": "Cheng, Heqin"}
   ],
-  "description": "Code, processed daily station data, station-matched CMIP6 auxiliary training contexts, curated manuscript table/figure data, full prediction tables, and model checkpoints for a physics-deep learning hybrid framework for daily drought-index and flash-drought early-risk forecasting across eight stations in the Jinsha River Basin.",
+  "description": "Code, processed daily station data, station-matched CMIP6 auxiliary training contexts, curated manuscript table/figure data, full prediction tables, and model checkpoints for a physics-deep learning hybrid framework for daily drought-index and flash-drought early-risk forecasting. The package covers the eight-station Jinsha River Basin main experiment and a 16-station Upper Yellow River Basin external validation with both zero-shot transfer and local recalibration protocols.",
   "license": "cc-by-4.0",
   "keywords": [
     "drought forecasting",
@@ -14,11 +15,13 @@
     "water balance",
     "physics-guided machine learning",
     "deep learning",
-    "Jinsha River Basin"
+    "Jinsha River Basin",
+    "Upper Yellow River Basin",
+    "cross-basin validation"
   ],
   "upload_type": "dataset",
   "access_right": "open",
-  "version": "1.0.1-wrr-submission",
+  "version": "1.1.0-wrr-revision",
   "related_identifiers": [
     {
       "identifier": "https://github.com/ARETE-zzwl/jinsha-daily-drought-hybrid",

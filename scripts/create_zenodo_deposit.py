@@ -41,16 +41,18 @@ def create_deposition(api_url: str, token: str) -> dict:
             "description": (
                 "Reproducibility package for the manuscript 'Physics-Deep Learning Hybrid Framework "
                 "for Multi-Station Daily Drought Indices and Flash Drought Forecasting in the Jinsha River Basin'. "
-                "This record contains the GitHub release source archive, full prediction tables, and trained model "
-                "checkpoints. The source code is released under the MIT License; processed data and derived artifacts "
-                "are released under CC BY 4.0. The GitHub repository is "
+                "This record contains the GitHub release source archive, full prediction tables, trained model "
+                "checkpoints, and the 16-station Upper Yellow River external-validation data and outputs. The source "
+                "code is released under the MIT License; processed data and derived artifacts are released under "
+                "CC BY 4.0. The GitHub repository is "
                 "https://github.com/ARETE-zzwl/jinsha-daily-drought-hybrid."
             ),
             "creators": [
                 {"name": "Zhu, Shibang"},
                 {"name": "Wang, Zhaocai"},
-                {"name": "Zhang, Gengxi"},
-                {"name": "Zhong, Huayu"},
+                {"name": "Wu, Junhao"},
+                {"name": "Ding, Weijie"},
+                {"name": "Cheng, Heqin"},
             ],
             "access_right": "open",
             "license": "cc-by-4.0",
@@ -59,12 +61,15 @@ def create_deposition(api_url: str, token: str) -> dict:
                 "drought forecasting",
                 "flash drought",
                 "Jinsha River Basin",
+                "Upper Yellow River Basin",
+                "cross-basin validation",
                 "deep learning",
                 "model checkpoint",
                 "prediction table",
                 "reproducibility package",
                 "source code",
             ],
+            "version": "1.1.0-wrr-revision",
             "related_identifiers": [
                 {
                     "identifier": "https://github.com/ARETE-zzwl/jinsha-daily-drought-hybrid",
@@ -102,8 +107,8 @@ def main() -> None:
         "--source-zip",
         type=Path,
         default=Path(__file__).resolve().parents[2]
-        / "zenodo_artifacts"
-        / "jinsha-daily-drought-hybrid-v1.0.1-wrr-submission-source.zip",
+        / "zenodo_artifacts_v1.1.0"
+        / "jinsha-daily-drought-hybrid-v1.1.0-wrr-revision-source.zip",
     )
     parser.add_argument(
         "--artifact-zip",
@@ -119,26 +124,45 @@ def main() -> None:
         / "zenodo_artifacts"
         / "jinsha-daily-drought-hybrid-v1.0.1-wrr-submission-cmip6-station-contexts.zip",
     )
+    parser.add_argument(
+        "--upper-yellow-data-zip",
+        type=Path,
+        default=Path(__file__).resolve().parents[2]
+        / "zenodo_artifacts_v1.1.0"
+        / "jinsha-daily-drought-hybrid-v1.1.0-wrr-revision-upper-yellow-data.zip",
+    )
+    parser.add_argument(
+        "--upper-yellow-artifact-zip",
+        type=Path,
+        default=Path(__file__).resolve().parents[2]
+        / "zenodo_artifacts_v1.1.0"
+        / "jinsha-daily-drought-hybrid-v1.1.0-wrr-revision-upper-yellow-artifacts.zip",
+    )
     parser.add_argument("--api-url", default="https://zenodo.org/api")
     parser.add_argument("--publish", action="store_true", help="Publish immediately. This is irreversible.")
     parser.add_argument(
         "--result-json",
         type=Path,
-        default=Path(__file__).resolve().parents[2] / "zenodo_artifacts" / "zenodo_deposition_result.json",
+        default=Path(__file__).resolve().parents[2]
+        / "zenodo_artifacts_v1.1.0"
+        / "zenodo_deposition_result.json",
     )
     args = parser.parse_args()
 
-    for archive in (args.source_zip, args.artifact_zip, args.cmip_zip):
+    archives = (
+        args.source_zip,
+        args.artifact_zip,
+        args.cmip_zip,
+        args.upper_yellow_data_zip,
+        args.upper_yellow_artifact_zip,
+    )
+    for archive in archives:
         if not archive.exists():
             raise FileNotFoundError(archive)
 
     token = token_from_env()
     deposition = create_deposition(args.api_url, token)
-    upload_results = [
-        upload_file(deposition, args.source_zip, token),
-        upload_file(deposition, args.artifact_zip, token),
-        upload_file(deposition, args.cmip_zip, token),
-    ]
+    upload_results = [upload_file(deposition, archive, token) for archive in archives]
 
     result = {"deposition": deposition, "uploads": upload_results, "published": None}
     if args.publish:

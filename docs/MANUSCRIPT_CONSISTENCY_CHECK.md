@@ -45,4 +45,4 @@ This name is concise, avoids journal-specific wording, and captures the study ar
 
 ## Remaining Publication Metadata
 
-The public GitHub URL and Zenodo DOI have been inserted. The manuscript DOI in `.zenodo.json` remains pending until journal acceptance. The Zenodo record includes the tagged source archive, station-matched CMIP6 auxiliary contexts, full prediction tables, and model checkpoints at https://doi.org/10.5281/zenodo.20705450.
+The public GitHub URL and versioned Zenodo DOI have been inserted. The manuscript DOI in `.zenodo.json` remains pending until journal acceptance. The Zenodo revision record includes the tagged source archive, station-matched CMIP6 auxiliary contexts, Upper Yellow River external-validation inputs, full prediction tables, and model checkpoints at https://doi.org/10.5281/zenodo.22232487.

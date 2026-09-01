@@ -7,16 +7,20 @@ authors:
     given-names: Shibang
   - family-names: Wang
     given-names: Zhaocai
-  - family-names: Zhang
-    given-names: Gengxi
-  - family-names: Zhong
-    given-names: Huayu
-version: "1.0.1-wrr-submission"
-date-released: "2026-06-15"
-license: MIT
+  - family-names: Wu
+    given-names: Junhao
+  - family-names: Ding
+    given-names: Weijie
+  - family-names: Cheng
+    given-names: Heqin
+version: "1.1.0-wrr-revision"
+date-released: "2026-09-01"
+license:
+  - MIT
+  - CC-BY-4.0
 repository-code: "https://github.com/ARETE-zzwl/jinsha-daily-drought-hybrid"
-doi: "10.5281/zenodo.20705450"
-abstract: "Code, processed station data, CMIP6 auxiliary training contexts, full prediction tables, and model checkpoints for a physics-deep learning hybrid framework that predicts custom 30-day and 90-day standardized water-balance drought indices and flash-drought early-risk probabilities across eight Jinsha River Basin stations."
+doi: "10.5281/zenodo.22232487"
+abstract: "Code, processed station data, CMIP6 auxiliary training contexts, full prediction tables, and model checkpoints for a physics-deep learning hybrid framework that predicts custom 30-day and 90-day standardized water-balance drought indices and flash-drought early-risk probabilities. The release includes the eight-station Jinsha River Basin main experiment and a 16-station Upper Yellow River Basin external validation."
 keywords:
   - drought forecasting
   - flash drought
@@ -24,3 +28,5 @@ keywords:
   - physics-guided machine learning
   - deep learning
   - water balance
+  - cross-basin validation
+  - Upper Yellow River Basin

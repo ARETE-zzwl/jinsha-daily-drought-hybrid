@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "jinsha-daily-drought-hybrid"
-version = "1.0.1"
+version = "1.1.0"
 description = "Physics-deep learning hybrid daily drought-index and flash-drought risk forecasting."
 readme = "README.md"
 requires-python = ">=3.10"
@@ -12,10 +12,11 @@ license = {text = "MIT"}
 authors = [
   {name = "Shibang Zhu"},
   {name = "Zhaocai Wang"},
-  {name = "Gengxi Zhang"},
-  {name = "Huayu Zhong"}
+  {name = "Junhao Wu"},
+  {name = "Weijie Ding"},
+  {name = "Heqin Cheng"}
 ]
-keywords = ["drought forecasting", "flash drought", "hydrology", "deep learning"]
+keywords = ["drought forecasting", "flash drought", "hydrology", "deep learning", "cross-basin validation"]
 dependencies = [
   "matplotlib>=3.7",
   "numpy>=1.23",
